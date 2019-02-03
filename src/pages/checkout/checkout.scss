@@ -1,0 +1,58 @@
+page-checkout {
+    .scroll-content{
+        padding: 13px;
+    }
+    .label-md{
+        font-size: 1.4rem;
+    }
+}
+.personal-info{
+    @extend %box-shadow;
+    margin-bottom: 13px;
+}
+.payment-method{
+    img{
+        width: 100%;
+        border-radius: 4px;
+        object-fit: contain;
+        -o-object-fit: contain;
+        border: 1px solid white;
+    }
+}
+.payment-form{
+    @extend %box-shadow;
+    padding-top: 8px;
+    .item-md{
+        background-color: transparent;
+        &.item-input.input-has-focus{
+            .item-inner{
+                border-bottom-color: #c8c7cc;
+                box-shadow: none;
+            }
+        }
+    }
+    .label-md{
+        color: #757575;
+        margin-bottom: 0;
+    }
+    &.list-md{
+        .item-block{
+            &:last-child{
+                border-bottom: none;
+                box-shadow: none;
+            }
+            .item-inner{
+                border-bottom: 0.55px solid #a6a6a6 !important;
+            }
+        }
+    }
+    .text-input-md{
+        font-size: 1.55rem;
+        margin-bottom: 0;
+    }
+}
+.adrss{
+    background: transparent;
+    padding: 0 0 20px 0px;
+    padding-right: 16px;
+}

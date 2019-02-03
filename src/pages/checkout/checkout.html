@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-capitalize>checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="personal-info" no-lines>
+    <ion-label fixed>Full Name</ion-label>
+    <ion-input type="text" value=""></ion-input>
+  </ion-item>
+  <ion-item class="personal-info" no-lines>
+    <ion-label fixed>Address</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <ion-item class="personal-info" no-lines>
+    <ion-label fixed>E-Mail Address</ion-label>
+    <ion-input type="email" value=""></ion-input>
+  </ion-item>
+  <ion-item class="personal-info" no-lines>
+    <ion-label fixed>Phone</ion-label>
+    <ion-input type="tel"></ion-input>
+  </ion-item>
+
+  <ion-list class="payment-form">
+    <ion-grid class="payment-method">
+      <ion-row>
+        <ion-col col-4 (click)="activeSelect(1)">
+          <img src="assets/img/visa.png" [ngClass]="{'activeBorder': selectImg==1}" />
+        </ion-col>
+        <ion-col col-4 (click)="activeSelect(2)">
+          <img src="assets/img/paypal.png" [ngClass]="{'activeBorder': selectImg==2}" />
+        </ion-col>
+        <ion-col col-4 (click)="activeSelect(3)">
+          <img src="assets/img/master.png" [ngClass]="{'activeBorder': selectImg==3}" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="adrss">
+      <ion-item>
+        <ion-label fixed>Card Number</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>CVV</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <button ion-button block text-uppercase color="secondary" class="app-btn" (click)="showConfirm()"> order </button>
+</ion-content>

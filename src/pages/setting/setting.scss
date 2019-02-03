@@ -1,0 +1,39 @@
+.setting-list{
+    .item-divider-md{
+        background: none;
+        font-weight: 500;
+        border-bottom: 1px solid color($colors , grayColor);
+        ion-label{
+            font-size: 1.8rem !important;
+            margin: 11px 8px 8px 0;
+        }
+    }
+    ion-label{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 15px 8px 15px 0;
+        p{
+            font-size: 1.3rem;
+            margin-top: 3px;
+        }
+    }
+    .select-md{
+        .select-icon{
+            display: none;
+        }
+    }
+}
+.select-setting{
+    .input-wrapper{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .label-md{
+        margin-bottom: 3px;
+        color: #000;
+    }
+    .select-md{
+        font-size: 1.3rem;
+        color: #757575;
+    }
+}

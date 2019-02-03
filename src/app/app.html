@@ -1,0 +1,37 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <div class="user-img" (click)="goTo('ProfilePage')" menuClose></div>
+      <ion-title color="light">john smith@gmail.com</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="menuList">
+   <ion-list>
+     <div class="menu-list" *ngFor="let p of pages">
+       <ion-item (click)="toggleDetails(p)" [ngClass]="{'accordionItem':p.details}" no-lines>
+         <ion-icon name="{{p.icon}}" item-left></ion-icon>
+         {{p.title}}
+         <ion-icon name="{{p.dropIcon}}" color="dark" item-right></ion-icon>
+       </ion-item>
+        <ion-item class="sub_list"  [ngClass]="{'accordionItem':p.details}" *ngFor="let object of p.details"
+         [hidden]="!isGroupShown(p)" (click)="openPage(object)" menuClose no-lines>
+          {{object.title}}
+         </ion-item>
+     </div>
+   </ion-list>
+ </ion-content>
+
+  <ion-footer>
+    <ion-buttons class="log-out" end>
+      <button ion-button text-lowercase icon-right clear menuClose (click)="goTo('LoginPage')">
+        logout
+        <ion-icon color="grayColor" name="md-log-out" large></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-footer>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

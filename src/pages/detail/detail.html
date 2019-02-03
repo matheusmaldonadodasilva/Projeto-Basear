@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize>Checked Shirt</ion-title>
+    <ion-buttons class="head-btns" end>
+      <button (click)="presentCartModal()" ion-button icon-only>
+        <ion-icon name="md-cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="detail-content">
+  <img src="assets/img/det-img.png" class="det-img" />
+  <ion-card>
+    <ion-item>
+      Checked Shirt
+      <button color="grayColor" ion-button item-right>$50,00</button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Description
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        It is a long established fact that a reader will be distracted by 
+        the readable content of a page when looking at its layout. 
+        The point of using Lorem Ipsum is that it has a more-or-less 
+        normal distribution of letters, as opposed to using 'Content 
+        here, content here', making it look like readable English.
+      </p>
+    </ion-card-content>
+
+    <ion-card-header>
+      Choose a colour for item
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center col-3 *ngFor="let item of colors">
+            <span class="color" [ngStyle]="{'background-color':  item.color }" (click)="activeSelect(item)" [ngClass]="{'activeBorder': selectColor==item}"></span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+    <ion-card-content>
+        <ion-item class="select-size" no-lines>
+          <ion-label color="dark">Size</ion-label>
+          <ion-select [(ngModel)]="Size">
+            <ion-option value="SM">SM</ion-option>
+            <ion-option value="M">M</ion-option>
+            <ion-option value="L">L</ion-option>
+          </ion-select>
+        </ion-item>
+    </ion-card-content>    
+  </ion-card>
+
+  <button (click)="presentCartModal()" ion-button block text-uppercase color="secondary" class="app-btn">
+    <ion-icon name="md-cart" color="light"></ion-icon>
+    add to cart
+  </button>
+</ion-content>

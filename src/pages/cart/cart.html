@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="secondary" hideBackButton="true">
+    <button (click)="dismiss()" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize>my cart</ion-title>
+    <ion-buttons class="head-btns" end>
+      <button (click)="dismiss()" ion-button icon-only>
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="cart-list" *ngFor="let item of cartList" no-lines>
+      <ion-thumbnail item-left>
+        <img src="{{item.img}}">
+      </ion-thumbnail>
+      <h2>{{item.name}}</h2>
+      <p>Colour<span class="color"></span></p>
+      <p>Size <span>{{item.size}}</span></p>
+      <p>{{item.price}}$</p>
+      <button class="delete-btn" (click)="removeItem(item)" ion-button clear item-right><ion-icon name="md-trash"></ion-icon></button>
+    </ion-item>
+
+    <div class="empty-cart" *ngIf="cartList.length==0" padding text-center>
+      <div>
+        <img src="assets/img/cartempty.png" />
+        <h4>Oops..</h4>
+        <p>Your Shopping Cart Is Empty</p>
+      </div>
+    </div>
+  </ion-list>
+  
+</ion-content>
+
+<ion-footer>
+  <div class="total-price" text-center>
+    <p *ngIf="cartList.length>0" >150.00$</p>
+    <button ion-button text-uppercase [navPush]="'CheckoutPage'" *ngIf="cartList.length>0" color="light">checkout</button>
+    <button ion-button text-uppercase [navPush]="'HomePage'" *ngIf="cartList.length==0" color="light">Keep Shopping</button>
+  </div>
+</ion-footer>

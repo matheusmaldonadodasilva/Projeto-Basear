@@ -1,0 +1,40 @@
+<ion-content class="app-bg" padding>
+    <div class="Loginpage">
+      <div class="formContainer">
+          <form class="app-form" padding>
+            <h4 class="title-form" color="light" text-uppercase>Login</h4>
+            <ion-list>
+              <ion-item>
+                <ion-label floating>Email / Username</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-list>
+            <button ion-button block text-uppercase color="secondary" [navPush]="'HomePage'">login</button>
+            <h4 color="light" [navPush]="'RegisterPage'" text-center>No account yet? Create one</h4>
+            <h4 color="light" text-center (click)="forgotPassword()">forgot password</h4>
+          </form>
+      </div>
+    </div>
+    <div class="loginFooter">
+        <div class="option-sign" text-center>
+          <p>Sign in with</p>
+          <ion-grid no-padding>
+            <ion-row padding-bottom>
+              <ion-col col-4>
+                <i class="app-facebook-1"></i>
+              </ion-col>
+              <ion-col col-4>
+                <i class="app-twitter"></i>
+              </ion-col>
+              <ion-col col-4>
+                <i class="app-gplus"></i>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>  
+    </div>
+</ion-content>

@@ -1,0 +1,45 @@
+page-home {
+    [menuToggle]{
+        display: inline-block !important;
+    }
+    .scroll-content{
+        padding-bottom: 15px;
+    }
+    .searchbar-md{
+        position: absolute;
+        top: 185px;
+        padding: 8px 13px;
+        .searchbar-input{
+            background-color: color($colors,secondary);
+        }
+        input::-webkit-input-placeholder {
+            font-size: 1.4rem;
+            font-weight: 100;
+        }
+    }
+}
+
+.home-content{
+    .new-collection{
+        height: 165px;
+        width: 100%;
+        margin-bottom: 25px;
+        object-fit: cover;
+        @extend %box-shadow;
+    }
+}
+
+.products{
+    padding: 7px 13px 13px 13px;
+    p{
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+}
+
+.sub-header{
+    .searchbar-md{
+        transition: all .8s ease-in-out;
+        top: 33px !important;
+    }
+}

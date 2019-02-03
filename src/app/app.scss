@@ -1,0 +1,208 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+.alert-input{
+    border-radius: 0 !important;
+}
+
+.header-md{
+    &::after{
+        display: none;
+    }
+}
+
+.toolbar-title-md{
+    padding: 0 12px 0 3px;
+    font-weight: normal;
+}
+.toolbar-background-md{
+    border: none !important;
+}
+
+.head-btns{
+    .bar-button-md{
+        width: 28px;
+        margin-right: 0;
+        margin-left: 5px;
+        ion-icon{
+            font-size: 2.1rem;
+        }
+    }
+}
+
+.item-select{
+    min-height: 3.7rem;
+    border-radius: 2px;
+    .label-md{
+        color: #000;
+        margin: 8px 8px 8px 0;
+        font-size: 1.5rem;
+    }
+    .select-text{
+        font-size: 1.5rem;
+    }
+}
+.select-md{
+    padding: 8px 8px 8px 16px;
+    .searchbar-input{
+        @extend %box-shadow;
+        font-size: 1.5rem;
+    }
+    .select-icon{
+        .select-icon-inner{
+            color: #000;
+        }
+    }
+}
+.select-size{
+    @extend %box-shadow;
+    background-color: color($colors,grayColor);
+}
+
+.fab{
+    ion-icon{
+        font-size: 2.1rem;
+    }
+}
+
+ion-backdrop{
+    opacity: 0.35;
+    visibility: visible !important;
+    z-index: -1;
+}
+
+.segment-md{
+    background-color: color($colors,primary);
+    .segment-button{
+        font-size: 1.3rem;
+        color: white;
+        &.segment-activated{
+            border-color: color($colors,secondary);
+        }
+    }
+}
+
+.toggle-md{
+    .toggle-inner{
+        top: -3.5px;
+    }
+}
+
+.app-slider , .swiper-container , .swiper-wrapper , .slide-zoom{
+    height: auto;
+    text-align: left;
+}
+.app-slider{
+    .swiper-slide{
+        align-items: flex-start;
+    }
+}
+
+.activeBorder{
+    border: 1px solid color($colors,dark) !important;
+    border-radius: 4px;
+}
+
+// App statusbar(IOS platform) Sass
+// --------------------------------------------------
+.toolbar.statusbar-padding{
+    padding-top: calc(20px + 4px);
+    min-height: calc(48px + 20px);
+}
+@media only screen and (max-width: 767px){
+    .md .modal-wrapper > .ion-page > ion-header > .share-toolbar.statusbar-padding:first-child{
+        padding-top: 4px;
+        min-height: 56px;
+    }
+}
+.md ion-menu > .menu-inner > ion-header > .toolbar.statusbar-padding:first-child{
+    min-height: calc(160px + 20px);
+}
+
+// App menu
+// --------------------------------------------------
+ion-menu{
+    ion-header{
+        &::after{
+            display: none;
+        }
+    }
+    .toolbar-md{
+        min-height: 160px;
+        padding: 4px 10px;
+        align-items: flex-end;
+    }
+    .toolbar-background-md{
+        @extend %cover;
+        background-image: url(../assets/img/menu-bg.png);
+    }
+    .user-img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 40px;
+        @extend %cover;
+        background-image: url(../assets/img/user-img.png);
+    }
+    .toolbar-title-md{
+        color: color($colors , light);
+        padding-bottom: 10px;
+        font-size: 1.4rem;
+    }
+    ion-list{
+        padding: 10px 0;
+    }
+    .item-md{
+        background: none;
+        font-size: 1.3rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #000;
+        ion-icon[item-left]{
+            + .item-inner{
+                margin-left: 0;
+            }
+        }
+    }
+    .item{
+        ion-icon{
+            font-size: 2rem;
+            min-height: 2rem;
+            color: darken(color($colors,grayColor),33%);
+        }
+    }
+    .log-out{
+        .button-clear-md{
+            color: #000;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        [icon-right]{
+            ion-icon{
+                font-size: 1.8em;
+                color: color($colors,secondary);
+            }
+        }
+    }
+    .footer-md{
+        padding-bottom: 10px;
+        &::before{
+            display: none;
+        }
+    }
+}
+.list-md{
+    .menu-list{
+        &:nth-child(3){
+           border-bottom: 1px solid color($colors,grayColor) !important;
+        }
+    }
+}
+.sub_list{
+    background-color: rgba(color($colors,primary),.15) !important;
+    padding-left:50px;
+    font-size: 1.2rem !important;
+}

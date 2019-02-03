@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle start>
+      <ion-icon name="md-menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize>setting</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item-group class="setting-list" margin-bottom>
+    <ion-item-divider no-padding color="light">Account</ion-item-divider>
+    <ion-item class="select-setting" no-padding>
+      <ion-label>
+        Change Language
+      </ion-label>
+      <ion-select no-padding>
+        <ion-option value="normal" [selected]="true">English</ion-option>
+        <ion-option value="light">French</ion-option>
+        <ion-option value="bold">Cantonese</ion-option>
+        <ion-option value="bolder">German</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item [navPush]="'ProfilePage'" no-padding>Edit Profile</ion-item>
+    <ion-item [navPush]="'LoginPage'" no-padding>Log out</ion-item>
+  </ion-item-group>
+
+  <ion-item-group class="setting-list" margin-bottom>
+    <ion-item-divider no-padding color="light">Settings</ion-item-divider>
+    <ion-item no-padding>
+      <ion-label>Location service</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+    <ion-item class="select-setting" no-padding>
+      <ion-label>
+        Story Text Weight
+      </ion-label>
+      <ion-select no-padding>
+        <ion-option value="normal" [selected]="true">Normal</ion-option>
+        <ion-option value="light">light</ion-option>
+        <ion-option value="bold">bold</ion-option>
+        <ion-option value="bolder">bolder</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item no-padding>
+      <ion-label>Vibrate</ion-label>
+      <ion-toggle></ion-toggle> 
+    </ion-item>
+  </ion-item-group>
+
+</ion-content>

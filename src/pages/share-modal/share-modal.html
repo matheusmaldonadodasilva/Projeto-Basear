@@ -1,0 +1,45 @@
+
+<ion-header>
+  <ion-toolbar class="share-toolbar" hideBackButton="true">
+    <ion-title text-capitalize>share via</ion-title>
+    <ion-buttons (click)="close()" end>
+      <button class="close-modal" ion-button icon-only text-right color="primary">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="share-content">
+  <ion-list no-margin>
+    <ion-item (click)="close()">
+      <img src="assets/img/dropbox.png" item-start />
+      <h2>Dropbox</h2>
+    </ion-item>
+
+    <ion-item (click)="close()">
+      <img src="assets/img/facebook.png" item-start />
+      <h2>Facebook</h2>
+    </ion-item>
+
+    <ion-item (click)="close()">
+      <img src="assets/img/gmail.png" item-start />
+      <h2>Gmail</h2>
+    </ion-item>
+
+    <ion-item (click)="close()">
+      <img src="assets/img/instagram.png" item-start />
+      <h2>Instagram</h2>
+    </ion-item>
+
+    <ion-item (click)="close()">
+      <img src="assets/img/twitter.png" item-start />
+      <h2>Twitter</h2>
+    </ion-item>
+
+    <ion-item (click)="close()">
+      <img src="assets/img/hangout.png" item-start />
+      <h2>Hangout</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

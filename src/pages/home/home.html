@@ -1,0 +1,27 @@
+<ion-header class="header_home">
+  <ion-navbar color="primary" hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize>Home</ion-title>
+    <ion-buttons class="head-btns" end>
+      <button (click)="presentCartModal()" ion-button icon-only>
+        <ion-icon name="md-cart"></ion-icon>
+      </button>
+      <button (click)="presentFilterModal()" ion-button icon-only>
+        <ion-icon name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar placeholder="Search a item.."></ion-searchbar>
+</ion-header>
+
+<ion-content class="home-content" fullscreen (ionScroll)="scrollingFun($event)">
+  <img src="assets/img/new.png" class="new-collection" />
+
+  <div class="products">
+    <p text-uppercase>Our popular products</p>
+    <!-- selector in shared page -->
+    <page-main-list></page-main-list>
+  </div>
+</ion-content>

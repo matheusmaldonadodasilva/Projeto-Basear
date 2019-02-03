@@ -1,0 +1,20 @@
+<ion-card class="app-card" *ngFor="let item of grid">
+  <img src="{{item.img}}" [navPush]="'DetailPage'" />
+  <div class="det">
+    <h4 no-margin>Checked Shirt</h4>
+    <p no-margin>$ 50.00</p>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button block>ADD</button>
+        </ion-col>
+        <ion-col col-3 (click)="like(item)">
+          <ion-icon name="md-heart" color="light" [ngClass]="{'activeColor': item.activeLike }"></ion-icon>
+        </ion-col>
+        <ion-col col-3 (click)="presentshareModal()">
+          <ion-icon name="md-share" color="light"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-card>

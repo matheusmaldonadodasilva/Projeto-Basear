@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize>Shirt</ion-title>
+    <ion-buttons class="head-btns" end>
+      <button (click)="presentCartModal()" ion-button icon-only>
+        <ion-icon name="md-cart"></ion-icon>
+      </button>
+      <button (click)="presentFilterModal()" ion-button icon-only>
+        <ion-icon name="md-funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-segment [(ngModel)]="tabs">
+      <ion-segment-button (click)="selectTab(0)" value="0">
+        Woman
+      </ion-segment-button>
+      <ion-segment-button (click)="selectTab(1)" value="1">
+        Man
+      </ion-segment-button>
+      <ion-segment-button (click)="selectTab(2)" value="2">
+        kids
+      </ion-segment-button>
+  </ion-segment>
+ 
+  <ion-searchbar placeholder="Search a item.."></ion-searchbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-slides class="app-slider" #pageSlider (ionSlideWillChange)="changeWillSlide($event)">
+      <ion-slide>
+        <div class="sub-list">
+          <!-- selector in shared page -->
+          <page-main-list></page-main-list>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <!-- selector in shared page -->
+        <page-main-list></page-main-list>
+      </ion-slide>
+      <ion-slide>
+        <!-- selector in shared page -->
+        <page-main-list></page-main-list>
+      </ion-slide>
+    </ion-slides>
+</ion-content>
